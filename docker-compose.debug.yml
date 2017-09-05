@@ -1,0 +1,15 @@
+version: '2'
+
+services:
+  hybrid:
+    image: hybrid:debug
+    build:
+      context: .
+      dockerfile: Dockerfile.debug
+    ports:
+      - "4500:4500"
+      - "5858:5858"
+    volumes:
+      - .:/src
+    environment:
+      - REMOTE_DEBUGGING

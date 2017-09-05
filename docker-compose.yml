@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  hybrid:
+    image: hybrid
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "4500:4500"
