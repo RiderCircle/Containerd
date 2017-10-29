@@ -1,6 +1,6 @@
 pipeline:
  build:
-  image: node
+  image:node
   commands:
    -env
   when:
