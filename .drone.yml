@@ -5,4 +5,4 @@ pipeline:
       - npm install
       - npm start
     when:
-	event:push
+      event:push
