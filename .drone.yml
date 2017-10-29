@@ -1,0 +1,8 @@
+pipeline:
+ build:
+  image: node
+  commands:
+   -env
+  when:
+   event:push
+
