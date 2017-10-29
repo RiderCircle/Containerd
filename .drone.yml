@@ -1,7 +1,8 @@
 pipeline:
- image:node
- commands:
-   - env
- when:
-  event:push
-
+  frontend:
+    image: node
+    commands:
+      - npm install
+      - npm start
+    when:
+	event:push
