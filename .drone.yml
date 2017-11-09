@@ -3,7 +3,7 @@ pipeline:
   build: 
     commands: 
       - "npm install"
-    image: "node:lite"
+    image: node:lite
   publish: 
     image: plugins/docker
     password: Guitarist@2012
