@@ -1,15 +1,17 @@
-pipeline:
-  build:
-    image: node:lite
-    commands:
-      - npm install
-    
-  publish:
+--- 
+pipeline: 
+  build: 
+    commands: 
+      - "npm install"
+    image: "node:lite"
+  publish: 
     image: plugins/docker
-    username: shivahs
     password: Guitarist@2012
     repo: ridecircle/test
-    tags: [ 1.0.0, 1.0, latest ]
- 
-  when:
+    tags: 
+      - "1.0.0"
+      - 1.0
+      - latest
+    username: shivahs
+  when: 
     event: push
