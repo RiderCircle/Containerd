@@ -1,9 +1,9 @@
 --- 
 pipeline: 
   build: 
+    image: node:slim
     commands: 
       - "npm install"
-    image: node:lite
   publish: 
     image: plugins/docker
     password: Guitarist@2012
