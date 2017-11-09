@@ -12,4 +12,4 @@ pipeline:
     tags: [ 1.0.0, 1.0, latest ]
  
   when:
-    event:push
+    event: push
