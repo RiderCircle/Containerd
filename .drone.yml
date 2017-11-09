@@ -5,13 +5,11 @@ pipeline:
     commands: 
       - "npm install"
   publish: 
-    image: plugins/docker
+    image: plugins/docker:1.12
+    username: shivahs
+    email: shivaprasad1993@gmail.com
     password: Guitarist@2012
     repo: ridecircle/test
     tags: 
-      - "1.0.0"
-      - 1.0
       - latest
-    username: shivahs
-  when: 
-    event: push
+    dockerfile: ./Dockerfile
