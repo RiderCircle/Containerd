@@ -1,8 +1,15 @@
 pipeline:
-  frontend:
-    image: node
+  build:
+    image: node:lite
     commands:
       - npm install
-      - npm start
-    when:
-      event:push
+    
+  publish:
+    image: plugins/docker
+    username: shivahs
+    password: Guitarist@2012
+    repo: ridecircle/test
+    tags: [ 1.0.0, 1.0, latest ]
+ 
+  when:
+    event:push
